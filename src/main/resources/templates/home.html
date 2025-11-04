@@ -1,15 +1,89 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-    <title>FastTrack Pro 🚀</title>
-    <!-- Link custom CSS -->
-    <link rel="stylesheet" th:href="@{/css/style.css}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FastTrack Pro | Logistics Dashboard</title>
+  <link rel="stylesheet" th:href="@{/css/output.css}">
 </head>
-<body>
-    <div>
-        <h1>Welcome to FastTrack Pro 🚀</h1>
-        <p>Your Spring Boot app is running successfully!</p>
-        <button>Get Started</button>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+  <!-- 🌟 Header -->
+  <div th:insert="layouts/header :: header"></div>
+
+  <!-- 💼 Hero Section -->
+  <section class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white text-center py-20 px-6">
+    <h1 class="text-5xl font-extrabold mb-4 tracking-tight">🚛 FastTrack Pro</h1>
+    <p class="text-lg mb-8 max-w-2xl mx-auto">
+      Manage your logistics effortlessly — Customers, Drivers, Routes & Deliveries in one smart dashboard.
+    </p>
+    <a href="#" 
+       class="bg-white text-blue-700 px-6 py-3 rounded-lg font-semibold shadow-lg hover:bg-gray-100 transition">
+      Get Started
+    </a>
+  </section>
+
+  <!-- 📊 Data Model Summary Cards -->
+  <section class="py-16 px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+    <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition">
+      <h3 class="text-3xl font-bold text-blue-600">👥</h3>
+      <h2 class="text-xl font-semibold mt-2">Customers</h2>
+      <p class="text-gray-500 mt-1">Store customer details & contact info.</p>
     </div>
+
+    <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition">
+      <h3 class="text-3xl font-bold text-green-600">🚗</h3>
+      <h2 class="text-xl font-semibold mt-2">Drivers</h2>
+      <p class="text-gray-500 mt-1">Manage driver details & licenses.</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition">
+      <h3 class="text-3xl font-bold text-indigo-600">🗺️</h3>
+      <h2 class="text-xl font-semibold mt-2">Routes</h2>
+      <p class="text-gray-500 mt-1">Track destinations, distance & duration.</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition">
+      <h3 class="text-3xl font-bold text-yellow-500">📦</h3>
+      <h2 class="text-xl font-semibold mt-2">Deliveries</h2>
+      <p class="text-gray-500 mt-1">View package status & linked records.</p>
+    </div>
+  </section>
+
+  <!-- 🧩 ERD Preview Section -->
+  <section class="bg-white py-16 px-8 text-center shadow-inner">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6">📘 FastTrack Data Model</h2>
+    <p class="text-gray-600 max-w-2xl mx-auto mb-10">
+      The FastTrack system connects <b>Customers</b>, <b>Drivers</b>, <b>Routes</b>, and <b>Deliveries</b> seamlessly.
+      Every delivery is linked to a customer, a driver, and a route for smooth tracking.
+    </p>
+
+    <!-- ERD-like Visualization -->
+    <div class="flex flex-wrap justify-center items-center gap-8">
+      <div class="bg-blue-100 p-6 rounded-xl shadow">
+        <h3 class="text-blue-700 font-semibold">Customers</h3>
+        <p class="text-sm text-gray-600">customer_id, name, email, address</p>
+      </div>
+      <div class="text-3xl">➡️</div>
+      <div class="bg-yellow-100 p-6 rounded-xl shadow">
+        <h3 class="text-yellow-700 font-semibold">Deliveries</h3>
+        <p class="text-sm text-gray-600">delivery_id, status, route_id</p>
+      </div>
+      <div class="text-3xl">⬅️</div>
+      <div class="bg-green-100 p-6 rounded-xl shadow">
+        <h3 class="text-green-700 font-semibold">Drivers</h3>
+        <p class="text-sm text-gray-600">driver_id, name, phone</p>
+      </div>
+      <div class="text-3xl">⬇️</div>
+      <div class="bg-indigo-100 p-6 rounded-xl shadow">
+        <h3 class="text-indigo-700 font-semibold">Routes</h3>
+        <p class="text-sm text-gray-600">route_id, distance, duration</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🌍 Footer -->
+  <div th:insert="layouts/footer :: footer"></div>
+
 </body>
 </html>
