@@ -2,23 +2,14 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>FastTrack Pro 🚀</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #eef3f7;
-            text-align: center;
-            margin-top: 100px;
-        }
-        h1 {
-            color: #2c3e50;
-        }
-        p {
-            color: #34495e;
-        }
-    </style>
+    <!-- Link custom CSS -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-    <h1>Welcome to FastTrack Pro 🚀</h1>
-    <p>Your Spring Boot app is running successfully!</p>
+    <div>
+        <h1>Welcome to FastTrack Pro 🚀</h1>
+        <p>Your Spring Boot app is running successfully!</p>
+        <button>Get Started</button>
+    </div>
 </body>
 </html>
