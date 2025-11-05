@@ -1,4 +1,4 @@
-package com.project.fasttrack.controller;
+package com.Project.fasttrack.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
