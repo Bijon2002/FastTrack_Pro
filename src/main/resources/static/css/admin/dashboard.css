@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.nav-link:hover {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+.card {
+    text-align: center;
+}

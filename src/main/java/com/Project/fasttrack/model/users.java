@@ -1,4 +1,4 @@
-package com.project.fasttrack.model;
+package com.Project.fasttrack.model;
 
 
 public class users {
