@@ -1,4 +1,4 @@
-package com.Project.fasttrack.service;
+package com.project.fasttrack.service;
 
 public class UserService {
     

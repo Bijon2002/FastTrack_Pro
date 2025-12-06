@@ -1,4 +1,4 @@
-package com.Project.fasttrack.repository;
+package com.project.fasttrack.repository;
 
 public class Customer {
     
