@@ -1,4 +1,4 @@
-package com.Project.fasttrack;
+package com.project.fasttrack;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
